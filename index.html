@@ -14,16 +14,19 @@
         <h2>Vacation Contest Sign-Up Form</h2>
         <form method="GET" action="results.html">
             <div>
-                <label for="firstname">Your First Name</label>
-                <input type="text" id="firstname" name="firstname">
-                <label for="lastname">Your Last Name</label>
-                <input type="text" id="lastname" name="lastname">
+                <label for="firstname">Your First Name</label><span class="required-field">*</span></label>
+                <input type="text" id="firstname" name="firstname" required minlength="2" maxlength="35">
+                <label for="lastname">Your Last Name</label><span class="required-field">*</span></label>
+                <input type="text" id="lastname" name="lastname" required minlength="2" maxlength="35">
+                <label for="age">Your Age</label>
+                <input type="number" id="age" name="age" min="21" max="120">
+                <h5>You must be age 21 or older to enter the contest.</h5>
             </div>
             <fieldset>
                 <legend>Your Contact Info</legend>
                 <div>
-                    <label for="email">Your Email</label>
-                    <input type="email" id="email" name="email">
+                    <label for="email">Your Email</label><span class="required-field">*</span></label>
+                    <input type="email" id="email" name="email" required>
                 </div>
                 <div>
                     <label for="address">Your Street Address</label>
@@ -86,7 +89,7 @@
                         <option value="WY">Wyoming</option>
                     </datalist>
                     <label for="zip">Your Zipcode</label>
-                    <input type="text" id="zip" name="zip">
+                    <input type="number" id="zip" name="zip">
                 </div>
             </fieldset>
 
@@ -94,7 +97,7 @@
                 <legend>Your Preferences</legend>
                 <h3>Choose your location</h3>
                 <div>
-                    <input type="radio" id="aruba" name="location" value="Aruba" checked> 
+                    <input type="radio" id="aruba" name="location" value="Aruba"> 
                     <label for="aruba">Aruba</label>
                 </div>
                 <div>
@@ -106,14 +109,14 @@
                     <label for="reykjavik">Reykjavik</label>
                 </div>
                 <div>
-                    <input type="radio" id="new-zealand" name="location" value="New Zealand"> 
+                    <input type="radio" id="new-zealand" name="location" value="New Zealand" checked> 
                     <label for="new-zealand">New Zealand</label>
                 </div>
                 <div>
                     <label for="color">Favorite Color</label>
                     <input type="color" id="color" name="color">
                 </div>
-                <h3>Please select any add-ons you'd like:</h3>
+                <h3>Add-Ons:</h3>
                 <div>
                     <input type="checkbox" id="sauna" name="extras" value="Sauna Access" checked> 
                     <label for="sauna">Sauna Access</label>
@@ -123,12 +126,20 @@
                     <label for="hottub">In-Room Hot Tub</label>
                 </div>
                 <div>
-                    <input type="checkbox" id="ocean" name="extras" value="Ocean View"> 
-                    <label for="ocean">Ocean View</label>
+                    <input type="checkbox" id="adventure tours" name="extras" value="adventure"> 
+                    <label for="adventure">Adventure Tours</label>
                 </div>
                 <div>
-                    <input type="checkbox" id="drinks" name="extras" value="Drinks Package"> 
-                    <label for="drinks">All-inclusive Drinks Package</label>
+                    <input type="checkbox" id="drinks" name="extras" value="dinner"> 
+                    <label for="dinner">Candlelight dinner</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="drinks" name="extras" value="scuba"> 
+                    <label for="scuba">Scuba Lessons</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="drinks" name="extras" value="golf"> 
+                    <label for="golf">VIP Golf Package</label>
                 </div>
             </fieldset>
             
